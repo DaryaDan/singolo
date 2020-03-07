@@ -456,7 +456,7 @@ filter: grayscale(1);
      margin-top: 10px;
    }
 
-   footer {
+   .foot {
      margin-top: -16px;
      background: rgb(45, 48, 58);
      width: 1020px;
