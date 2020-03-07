@@ -458,7 +458,6 @@ filter: grayscale(1);
 
    footer {
      margin-top: -16px;
-     margin-left: -8px;
      background: rgb(45, 48, 58);
      width: 1020px;
    }
