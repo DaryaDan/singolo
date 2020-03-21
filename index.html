@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,31 +9,41 @@
   <header class="header">
     <div class="width page__width">
       <h1 class="header__logo">SINGOLO<span class="header__logo-span">*</span></h1>
-        <ul class="nav">
-          <li class="nav__item nav_active">HOME</li><span class="circle"></span>
-          <li class="nav__item">SERVICES</li><span class="circle"></span>
-          <li class="nav__item">PORTFOLIO</li><span class="circle"></span>
-          <li class="nav__item">ABOUT</li><span class="circle"></span>
-          <li class="nav__item">CONTACT</li>
-        </ul>
+      <ul id="menu" class="nav">
+        <a href="#slider0" class="nav__item nav_active">HOME</a><span class="circle"></span>
+        <a href="#services1" class="nav__item">SERVICES</a><span class="circle"></span>
+        <a href="#portfolio1" class="nav__item">PORTFOLIO</a><span class="circle"></span>
+        <a href="#about1" class="nav__item">ABOUT</a><span class="circle"></span>
+        <a href="#contact" class="nav__item">CONTACT</a>
+      </ul>
     </div>
   </header>
 
-  <div class="slider">
+<section class="slider1" id="slider1">
+</section>
+
+<section class="scrol slider0" id="slider0">
+  <div class="slider" id="slider">
     <div class="width slider__width">
-      <button class="slider__arrow">
-        <img src="assets/arrow-left.png" alt="arrow-left"/>
-      </button>
-      <img src="assets/iPhone_Vertical.png" alt="iPhone Vertical" class="slider__content--vertical"/>
-      <img src="assets/iPhone_Horizontal.png" alt="iPhone Horizontal" class="slider__content--horizontal"/>
-      <button class="slider__arrow">
-        <img src="assets/arrow-right.png" alt="arrow-right"/>
-      </button>
+      <div class="slider__wrapper">
+    <div class="item slider__item">
+    <div class="tel1"><img src="assets/iPhone_Vertical.png" alt="iPhone Vertical" id="photo" class="active1 slider__content--vertical"/>
+        <div class="size" ><img src="assets/black.jpg" alt="black Vertical" id="photo1" class="active1 hidden black_vert"/></div></div>
+
+    <div class="tel2"><img src="assets/iPhone_Horizontal.png" alt="iPhone Horizontal" id="photo_" class="active2 slider__content--horizontal"/>
+        <div class="size_" ><img src="assets/black.jpg" alt="black Horizontal" id="photo1_" class="active2 hidden black_gor"/></div></div>
     </div>
-  </div>
-
-
-  <section class="services">
+    <div class="item slider__item">
+        <img src="assets/many_phone.png" alt="Second slide" class="slider_second_page">
+    </div>
+    </div>
+    </div>
+<a class="slider__arrow prev slider__control slider__control_left" role="button" id="but" onclick="fon();"></a>
+<a class="slider__arrow next slider__control slider__control_right" role="button" id="but" onclick="fon();"></a>
+</div>
+</section>
+  <section id="services1" class="scrol services1">
+  <section id="services" class="services">
               <div class="width width__services">
 
                   <h1 class="services__title"> Our Services</h1>
@@ -104,21 +114,23 @@
                   </div>
               </div>
           </section>
-          <section class="portfolio">
+            </section>
+          <section id="portfolio1" class="scrol portfolio1">
+          <section id="portfolio" class="portfolio">
             <div class="width portfolio__width">
               <h2 class="title_pic">Portfolio</h2>
               <p class="text_pic">
                 Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
               </p>
               <div>
-                <ul class="tags">
-                  <li><button class="tags_item tags_active">All</button></li>
-                  <li><button class="tags_item">Web Design</button></li>
-                  <li><button class="tags_item">Graphic Design</button></li>
-                  <li><button class="tags_item">Artwork</button></li>
+                <ul id="tags" class="tags">
+                  <a href="javascript:void(0)" onClick="func();"><li><button class="tags_item tags_active">All</button></li></a>
+                  <a href="javascript:void(0)" onClick="func();"><li><button class="tags_item">Web Design</button></li></a>
+                  <a href="javascript:void(0)" onClick="func();"><li><button class="tags_item">Graphic Design</button></li></a>
+                  <a href="javascript:void(0)" onClick="func();"><li><button class="tags_item">Artwork</button></li></a>
                 </ul>
               </div>
-              <div class="pictures">
+              <main class="pictures" id="pictures">
               <img class="img_pic" src="assets/pic1.jpg" alt="pic1" width="220" height="187"/>
               <img class="img_pic" src="assets/pic2.jpg" alt="pic2" width="220" height="187"/>
               <img class="img_pic" src="assets/pic3.jpg" alt="pic3" width="220" height="187"/>
@@ -131,10 +143,11 @@
               <img class="img_pic" src="assets/pic10.jpg" alt="pic10" width="220" height="187"/>
               <img class="img_pic" src="assets/pic11.jpg" alt="pic11" width="220" height="187"/>
               <img class="img_pic" src="assets/pic12.jpg" alt="pic12" width="220" height="187"/>
-              </div>
+            </main>
             </div>
           </section>
-          <section class="about-us">
+          <section id="about1" class="scrol about-us1">
+          <section id="about" class="about-us">
             <div class="width about-us_width">
               <h2 class="about-us_title">About Us</h2>
               <p class="about-us_text">
@@ -214,28 +227,40 @@
                   </div>
                 </div>
           </section>
+            </section>
+          <section id="contact" class="scrol contact">
           <div class="width">
           <div class="group">
           <h1 class="info">Get a Quote</h1>
           <h3>Fusce dapibus, tellus ac curcus commodo, tortor mauris condimentum.
             Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
             Fusce dapibus, tellus ac curcus commodo, tortor mauris condimentum nibh.</h3>
-          <form>
+          <form onsubmit="return false;" name="form">
           <p>
-          <input required type="text" pattern="^[a-zA-Z]+$" placeholder="Name (Required)"/>
+          <input required type="text" name="name" pattern="^[a-zA-Z]+$" placeholder="Name (Required)"/>
           </p>
           <p>
-          <input required type="email" placeholder="Email (Required)"/>
+          <input required type="email"  name="email" placeholder="Email (Required)"/>
           </p>
           <p>
-          <input type="text" placeholder="Subject"/>
+          <input type="text" id="subject" name="subject" placeholder="Subject"/>
           </p>
           <p>
-          <textarea placeholder="Describe your project in detail..."></textarea>
+          <textarea placeholder="Describe your project in detail..." name="describe" id="describe"></textarea>
           </p>
           <p class="submit">
-           <input type="submit" value="Отправить"/>
+           <input type="submit" id="submit" value="Submit" onclick="validate_form( );"/>
           </p>
+          <div id="message_block" class="hidden">
+            <div id="message">
+            <p> Письмо отправлено <br>
+              Тема: <span id="result"></span><br>
+              Описание: <span id="result_desc"></span>
+              </p>
+            <br>
+            <button id="close_button" onclick="location.reload();">OK</button>
+          </div>
+          </div>
           </form>
           <aside>
           <h2>Contact Information</h2>
@@ -254,5 +279,7 @@
           <img class="img" src="assets/twitter.png" alt="twitter"/>
           <img class="img" src="assets/linkedin.png" alt="linkedin"/></footer>
           </div>
+            </section>
+          <script src="script.js"></script>
 </body>
 </html>
