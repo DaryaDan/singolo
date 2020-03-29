@@ -1,4 +1,5 @@
 function func(){ //рандомное перемещение картинок
+document.querySelectorAll('#pictures img').forEach(el => el.classList.remove('img_pic_active'));
 var k, j, n, d, m, a;
 a=document.getElementById("pictures").getElementsByTagName("img");
 j=k=a.length;
@@ -14,19 +15,21 @@ k=j;
 while(k--){a[k].src=m[k];}
 }
 
-
-
 const PICT = document.getElementById('pictures'); //рамка вокруг иконок портфолио
 PICT.addEventListener('click', (event) => {
 PICT.querySelectorAll('img').forEach(el => el.classList.remove('img_pic_active'));
 event.target.classList.add('img_pic_active');
 });
 
-// const MENU = document.getElementById('menu'); //активные пункты главная
-// MENU.addEventListener('click', (event) => {
-// MENU.querySelectorAll('li').forEach(el => el.classList.remove('nav_active'));
-// event.target.classList.add('nav_active');
-// });
+const anchors1 = document.querySelectorAll('aa[href*="#"]'); //якорь по странице маленький
+for (let anchor1 of anchors1) {
+anchor1.addEventListener('click', function (e) {
+e.preventDefault();
+const blockID = anchor1.getAttribute('href').substr(1);
+document.getElementById(blockID).scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+})})}
 
 const anchors = document.querySelectorAll('a[href*="#"]'); //якорь по странице
 for (let anchor of anchors) {
@@ -57,6 +60,9 @@ block: 'start'
       if (sections[i] <= scrollPosition) {
         document.querySelector('.nav_active').setAttribute('class', 'nav__item');
         document.querySelector('a[href*=' + i + ']').setAttribute('class', 'nav__item nav_active');
+
+        document.querySelector('.nav_active1').setAttribute('class', 'nav__item1 menu__item');
+        document.querySelector('aa[href*=' + i + ']').setAttribute('class', 'nav__item1 nav_active1 menu__item');
       }
     }
   };
@@ -72,8 +78,6 @@ function validate_form(){ //валидация формы
   //Считаем значения из полей name и email в переменные x и y
   var x=document.forms["form"]["name"].value;
   var y=document.forms["form"]["email"].value;
-  // var q=document.forms["form"]["subject"].value;
-  // var w=document.forms["form"]["describe"].value;
   //Если поле name пустое выведем сообщение и предотвратим отправку формы
   if (x.length==0){
   return false;
@@ -82,12 +86,6 @@ function validate_form(){ //валидация формы
   if (y.length==0){
   return false;
   }
-  // if (q.length==0){
-  // return false;
-  // }
-  // if (w.length==0){
-  // return false;
-  // }
   //Проверим содержит ли значение введенное в поле email символы @ и .
   at=y.indexOf("@");
   dot=y.indexOf(".");
@@ -120,41 +118,6 @@ CLOSE.addEventListener('click', () => {
   document.getElementById('message_block').classList.add('hidden');
 });
 
-// /* Индекс слайда по умолчанию */  //слайдер
-// var slideIndex = 1;
-// showSlides(slideIndex);
-//
-// /* Функция увеличивает индекс на 1, показывает следующй слайд*/
-// function plusSlide() {
-//     showSlides(slideIndex += 1);
-// }
-//
-// /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-// function minusSlide() {
-//     showSlides(slideIndex -= 1);
-// }
-//
-// /* Устанавливает текущий слайд */
-// function currentSlide(n) {
-//     showSlides(slideIndex = n);
-// }
-//
-// /* Основная функция слайдера */
-// function showSlides(n) {
-//     var i;
-//     var slides = document.getElementsByClassName("item");
-//     if (n > slides.length) {
-//       slideIndex = 1
-//     }
-//     if (n < 1) {
-//         slideIndex = slides.length
-//     }
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none";
-//     }
-//     slides[slideIndex - 1].style.display = "block";
-// }
-//
 var pressed=0;  //фон
 function fon()
 {
