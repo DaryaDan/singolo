@@ -810,11 +810,11 @@ border-width: 4.52px;
 }
 
 .slider__control_left {
-left: -80px;
+left: -30px;
 }
 
 .slider__control_right {
-right: -80px;
+right: -30px;
 }
 
 .tel1 {
@@ -1095,11 +1095,11 @@ section#services, section#portfolio, section#about, section#contact{
 
   .slider__control_left {
   margin-top: -30px;
-  left: -100px;
+  left: -50px;
   }
 
   .slider__control_right {
-  right: -100px;
+  right: -50px;
   margin-top: -30px;
   }
 
